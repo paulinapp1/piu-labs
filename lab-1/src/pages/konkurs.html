@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Zgłoszenie do Konkursu Plastycznego</title>
+
+    <link rel="stylesheet" href="../css/konkurs.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Konkurs</h1>
+      <nav>
+        <ul>
+          <a href="../../index.html">Strona Główna</a>
+          <a href="konkurs.html">Konkurs</a>
+          <a href="login.html">Login</a>
+          <a href="uwagi.html">Uwagi</a>
+        </ul>
+      </nav>
+    </header>
+    <input type="checkbox" id="theme-switch" hidden />
+    <main>
+      <div class="form-header">
+        <h2>Zgłoszenie<br />do Konkursu Plastycznego</h2>
+        <input type="checkbox" id="theme-switch" hidden />
+        <label for="theme-switch" class="theme-toggle" title="Zmień motyw">
+          🌗
+        </label>
+      </div>
+
+      <div class="form-container">
+        <form
+          action="https://httpbin.org/get"
+          method="GET"
+          class="art-competition-form"
+        >
+          <div class="form-group">
+            <label for="imie">Imię:</label>
+            <input type="text" id="imie" name="imie" maxlength="30" required />
+          </div>
+
+          <div class="form-group">
+            <label for="nazwisko">Nazwisko:</label>
+            <input
+              type="text"
+              id="nazwisko"
+              name="nazwisko"
+              maxlength="50"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="miasto">Miasto:</label>
+            <input
+              type="text"
+              id="miasto"
+              name="miasto"
+              list="lista-miast"
+              placeholder="Wpisz lub wybierz"
+              required
+            />
+
+            <datalist id="lista-miast">
+              <option value="Warszawa"></option>
+              <option value="Kraków"></option>
+              <option value="Gdańsk"></option>
+              <option value="Poznań"></option>
+              <option value="Wrocław"></option>
+            </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="data-urodzenia">Data urodzenia:</label>
+
+            <input
+              type="date"
+              id="data-urodzenia"
+              name="data-urodzenia"
+              placeholder="rrrr-mm-dd"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="liczba-prac"
+              >Liczba zgłaszanych prac (od 1 do 6):</label
+            >
+            <input
+              type="number"
+              id="liczba-prac"
+              name="liczba-prac"
+              min="1"
+              max="6"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="kolor-wiodacy">Kolor wiodący prac:</label>
+            <input
+              type="color"
+              id="kolor-wiodacy"
+              name="kolor-wiodacy"
+              value="#ffff00"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="kategoria-pracy">Kategoria pracy:</label>
+            <select id="kategoria-pracy" name="kategoria-pracy" required>
+              <option value="" disabled selected>
+                -- wybierz kategorię --
+              </option>
+
+              <option value="rysonek">Rysunek</option>
+
+              <option value="malarstwo">Malarstwo</option>
+
+              <option value="grafika-cyfrowa">Grafika Cyfrowa</option>
+            </select>
+          </div>
+          <fieldset class="radio-fieldset">
+            <legend>Publikacja pracy online:</legend>
+
+            <label for="pub-tak">
+              <input
+                type="radio"
+                id="pub-tak"
+                name="publikacja"
+                value="tak"
+                checked
+                required
+              />
+              Tak
+            </label>
+
+            <label for="pub-nie">
+              <input type="radio" id="pub-nie" name="publikacja" value="nie" />
+              Nie
+            </label>
+          </fieldset>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="regulamin" name="regulamin" required />  
+            <label for="regulamin">Zgadzam się na regulamin konkursu</label>    
+          </div>
+          <button type="submit" class="submit-button">Wyślij zgłoszenie</button>
+        </form>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
