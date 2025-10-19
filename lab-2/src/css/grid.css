@@ -1,0 +1,138 @@
+:root {
+  --font-family: 'Arial, Helvetica, sans-serif';
+  --page-bg: lightgrey;
+  --white: #ffffff;
+  --header-bg: #f19a0c;
+  --nav-bg: #2b8dce;
+  --main-bg: #ffffff;
+  --aside-bg: #dcf3e5;
+  --footer-bg: #25a85c;
+  --logo-bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--page-bg);
+}
+
+main,
+aside {
+  h1,
+  h2,
+  h3,
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'header'
+    'nav'
+    'main'
+    'aside'
+    'footer';
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      'header header'
+      'nav nav'
+      'main aside'
+      'footer footer';
+  }
+}
+
+.container > header {
+  grid-area: header;
+  background-color: var(--header-bg);
+  padding: 1rem;
+
+  h1 {
+    display: inline;
+    color: var(--white);
+    padding-left: 1rem;
+  }
+
+  .logo {
+    display: inline;
+    border-style: none;
+    padding: 7px;
+    background-color: var(--white);
+  }
+
+  .logo::before {
+    content: 'Logo';
+  }
+}
+
+.container > nav {
+  grid-area: nav;
+  padding: 1rem;
+  background-color: var(--nav-bg);
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    text-align: left;
+  }
+}
+
+a {
+  color: var(--white);
+  padding: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.container > main {
+  grid-area: main;
+  padding: 1rem;
+  background-color: var(--main-bg);
+}
+
+.container > aside {
+  grid-area: aside;
+  background-color: var(--aside-bg);
+  padding: 1rem;
+}
+
+aside div {
+  text-align: center;
+}
+
+.container > footer {
+  grid-area: footer;
+  background-color: var(--footer-bg);
+  padding: 1rem;
+  text-align: center;
+}
+
+span {
+  font-size: 8vw;
+  @media (min-width: 1024px) {
+    font-size: 5vw;
+  }
+}
+
+footer p {
+  color: var(--white);
+  font-weight: bold;
+}
