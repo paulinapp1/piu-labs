@@ -1,5 +1,5 @@
 :root {
-  --color: none;
+  --color: transparent;
   --blue: #2060a5;
   --red: #cf3030;
   --green: #3d9941;
@@ -45,7 +45,7 @@ section {
 figure {
   width: 500px;
   border-radius: 10px;
-  border: 2, 5px solid var(--color);
+  border: 3px solid var(--color);
   background-color: var(--white);
 }
 
