@@ -3,10 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <title>Lab 3</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/polo.css" />
   </head>
   <body>
-    <h1>Lab 3</h1>
-    <a href="..">Powrót</a>
+    <section class="container">
+      <figure class="images">
+        <img src="src/img/polo_b.png" alt = "Niebieskie polo" class="bpolo"/>
+        <img src="src/img/polo_r.png" alt = "Czerwone polo" class="rpolo"/>
+        <img src="src/img/polo_g.png" alt = "Zielone polo" class="gpolo"/>
+        <img src="src/img/polo_y.png" alt = "Żółte polo" class="ypolo"/>
+      </figure>
+      <div class="description">
+        <div class="name">
+          <h1>
+            <span class="title">Koszulka Polo</span>
+            <span class="idk">Promocja!</span>
+          </h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, qui?</p>
+        </div>
+        <div class="colors">
+          <h2>Kolor:</h2>
+          <form class="color-list">
+            <label>
+              <input type="radio" name="v" value="blue" checked />
+              <span class="color-option blue"></span>
+            </label>
+             <label>
+              <input type="radio" name="v" value="red"/>
+              <span class="color-option red"></span>
+            </label>
+             <label>
+              <input type="radio" name="v" value="green"/>
+              <span class="color-option green"></span>
+            </label>
+             <label>
+              <input type="radio" name="v" value="yellow"/>
+              <span class="color-option yellow"></span>
+            </label>
+          </form>
+        </div>
+          <div class="sizes">
+            <h2>Rozmiar:</h2>
+            <form class="size-options">
+              <label>
+                <input type="radio" name="size" value="S" checked />
+                <span class="size-option">S</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="M" />
+                <span class="size-option">M</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="L" />
+                <span class="size-option">L</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="XL" />
+                <span class="size-option">XL</span>
+              </label>
+            </form>
+          </div>
+          <div class="price">
+            <h1>59,99 zł</h1>
+          <button class="add-to-cart">🛒 Do koszyka</button>
+          </div>
+        </section>
   </body>
 </html>

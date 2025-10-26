@@ -1,0 +1,212 @@
+:root {
+  --color: none;
+  --blue: #2060a5;
+  --red: #cf3030;
+  --green: #3d9941;
+  --yellow: #fac235;
+  --white: #ffffff;
+  --black: #000;
+  --gray: #d1d1d1;
+}
+
+body:has(input[value='blue']:checked) {
+  --color: var(--blue);
+}
+body:has(input[value='red']:checked) {
+  --color: var(--red);
+}
+body:has(input[value='green']:checked) {
+  --color: var(--green);
+}
+body:has(input[value='yellow']:checked) {
+  --color: var(--yellow);
+}
+
+html {
+  font-size: 16px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+body {
+  margin: 1rem;
+  padding: 0;
+  background-color: var(--gray);
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+figure {
+  width: 500px;
+  border-radius: 10px;
+  border: 2, 5px solid var(--color);
+  background-color: var(--white);
+}
+
+body:has(input[value='blue']:checked) .images img.bpolo {
+  display: block;
+}
+
+body:has(input[value='red']:checked) .images img.rpolo {
+  display: block;
+}
+
+body:has(input[value='green']:checked) .images img.gpolo {
+  display: block;
+}
+
+body:has(input[value='yellow']:checked) .images img.ypolo {
+  display: block;
+}
+
+img {
+  width: 100%;
+  display: none;
+}
+
+.description {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+}
+
+.name h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.idk {
+  background-color: var(--color);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.colors {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.color-option {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--black);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.color-list {
+  display: flex;
+  gap: 1rem;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.color-list input[type='radio'],
+.size-options input[type='radio'] {
+  display: none;
+}
+
+.color-list input[type='radio']:checked + .color-option,
+.color-list input[type='radio']:checked + .color-option {
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 2px var(--black);
+  width: calc(1.5rem - 4px);
+  height: calc(1.5rem - 4px);
+}
+
+.color-option.blue {
+  background-color: var(--blue);
+}
+.color-option.red {
+  background-color: var(--red);
+}
+.color-option.green {
+  background-color: var(--green);
+}
+.color-option.yellow {
+  background-color: var(--yellow);
+}
+
+.sizes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.size-options {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.size-option {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 2.5rem;
+  height: 2.2rem;
+  padding: 0 0.5rem;
+  border: 2px solid var(--black);
+  background-color: var(--white);
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.size-options input[type='radio']:checked + .size-option {
+  background-color: var(--color);
+  color: var(--white);
+  border: 2px solid var(--black);
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.price h1 {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.add-to-cart {
+  background-color: var(--color);
+  border: 2px solid var(--black);
+  padding: 1rem 2rem;
+  color: var(--white);
+  border-radius: 5px;
+  font-weight: bold;
+}
