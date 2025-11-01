@@ -3,10 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <title>Lab 4</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/kanban.css" />
   </head>
   <body>
     <h1>Lab 4</h1>
-    <a href="..">Powrót</a>
+    <div id="kanban-board">
+      <div class="column" id="todo-column">
+        <h1>TO DO</h1>
+        <div class="card-count">Liczba Kart: 1</div>
+        <div class="column-actions">
+          <button class="add-card-button">Dodaj kartę</button>
+          <button class="colorize-column-button">Koloruj kolumnę</button>
+          <button class="sort-column-button">Sortuj Kolumnę</button>
+        </div>
+        <div class="cards-container"></div>
+      </div>
+
+      <div class="column" id="in-progress-column">
+        <h1>IN PROGRESS</h1>
+        <div class="card-count">Liczba Kart: 1</div>
+        <div class="column-actions">
+          <button class="add-card-button">Dodaj kartę</button>
+          <button class="colorize-column-button">Koloruj kolumnę</button>
+          <button class="sort-column-button">Sortuj Kolumnę</button>
+        </div>
+        <div class="cards-container"></div>
+      </div>
+
+      <div class="column" id="done-column">
+        <h1>DONE</h1>
+        <div class="card-count">Liczba Kart: 1</div>
+        <div class="column-actions">
+          <button class="add-card-button">Dodaj kartę</button>
+          <button class="colorize-column-button">Koloruj kolumnę</button>
+          <button class="sort-column-button">Sortuj Kolumnę</button>
+        </div>
+        <div class="cards-container"></div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
