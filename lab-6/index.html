@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6 - Ajax Library Demo</title>
+     <link rel="stylesheet" href="style.css" />
+ 
+</head>
+<body>
+
+    <h1>Demo Biblioteki Ajax</h1>
+
+    <div class="controls">
+        <button id="fetch-data-btn">Pobierz 10 Postów (GET)</button>
+        <button id="fetch-error-btn">Uruchom Błąd (404)</button>
+        <button id="reset-btn">Resetuj Widok</button>
+    </div>
+
+    <div id="error-message"></div>
+
+    <div id="loader">Ładowanie danych...</div>
+
+    <h2>Pobrane Elementy:</h2>
+    <ul id="data-list">
+        </ul>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
