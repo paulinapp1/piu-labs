@@ -1,4 +1,4 @@
-import Ajax from '/Ajax-lib/ajax.js';
+import Ajax from '../Ajax-lib/ajax.js';
 const ajaxClient = new Ajax();
 
 const dataList=document.getElementById('data-list');
